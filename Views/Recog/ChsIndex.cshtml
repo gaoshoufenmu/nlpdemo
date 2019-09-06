@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@*<h4>@Html.TextBox("crude_pinyin")</h4>*@
+<input class="sec-txt" type="text" name="searchname" placeholder="Please input Chinese text" id="input_str_u">
+<input class="sec-btn" type="button" value="RECOG" id="recog_button_u">
+
+<div class="pre_guide">
+    <ul>
+        输入非中文字符串，可以识别出邮箱地址，链接地址，电话（手机）号码，日期，公司机构代码，统一信用代码，注册号（长度大于9），地区码，拼音，范围
+    </ul>
+    <ul>
+        电话区号可支持使用'-', '/', '()'作为分隔符号，如 '01012345678', '010-12345678', '010/23456789', '(010)34567890'
+    </ul>
+    <ul>
+        日期可支持使用'-', '/' 作为分隔符，如'1991-01', '1991-01-01', '1992/01', '19920124'
+    </ul>
+    <ul>
+        为简单处理，认为包含'@@'字符串为邮箱地址，因为即使不是有效邮箱地址，也不可能是其他字段
+    </ul>
+    <ul>
+        范围必须是以'-'连接的两个非负数值，如'1.1-100'
+    </ul>
+</div>
+<div id="u_res"></div>
+
